@@ -32,6 +32,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
       scrollbar-width: thin;
       scrollbar-color: var(--accent) var(--bg);
     }
@@ -149,6 +150,9 @@
       color: var(--text);
       text-decoration: none;
       letter-spacing: -0.02em;
+      display: inline-block;
+      padding: 0.5rem 0.25rem;
+      margin: -0.5rem -0.25rem;
     }
     .logo span { color: var(--accent); }
     .nav-links {
@@ -163,6 +167,9 @@
       text-decoration: none;
       transition: color 0.25s;
       letter-spacing: 0.02em;
+      display: inline-block;
+      padding: 0.75rem 0.35rem;
+      margin: -0.75rem -0.35rem;
     }
     .nav-links a:hover { color: var(--accent); }
     .nav-toggle {
@@ -736,7 +743,7 @@
 
   <nav id="nav">
     <div class="nav-inner">
-      <a href="#" class="logo" data-cursor="block"><span class="cursor-pull">Niko<span>.</span></span></a>
+      <a href="#hero" class="logo" data-cursor="block"><span class="cursor-pull">Niko<span>.</span></span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about" data-cursor="block"><span class="cursor-pull">About</span></a></li>
         <li><a href="#experience" data-cursor="block"><span class="cursor-pull">Experience</span></a></li>
@@ -758,7 +765,7 @@
         <span class="line"><span class="word">that</span> <span class="word highlight">perform.</span></span>
       </h1>
       <p class="hero-sub" data-cursor="text">
-        Physics graduate turned systems programmer. Most recently at Leaning Technologies — building test automation in TypeScript and fixing low-level C++ bugs that actually mattered.
+        Physics graduate turned systems programmer. Most recently at Leaning Technologies — test automation in TypeScript and low-level C++ debugging — plus Python side projects from scrapers and APIs to SQLite-backed apps deployed with CI/CD and cloud tooling.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary" data-cursor="block">
@@ -772,7 +779,7 @@
       <div class="hero-meta">
         <div class="meta-item"><strong>Codam</strong>Computer Science</div>
         <div class="meta-item"><strong>Leaning Technologies</strong>Software Engineer Intern</div>
-        <div class="meta-item"><strong>TypeScript + C++</strong>Test automation &amp; debugging</div>
+        <div class="meta-item"><strong>Python + Linux</strong>EasyHouse · Codam systems work</div>
       </div>
     </section>
 
@@ -786,6 +793,9 @@
           </p>
           <p data-cursor="text">
             My internship at Leaning Technologies is the work I'm most proud of: designing a TypeScript test suite that exposed silent C++ failures, then going deep into the codebase to fix the bugs it uncovered. That mix of automation and low-level debugging is where I do my best work.
+          </p>
+          <p data-cursor="text">
+            I work day to day on Linux — Codam's shell and HTTP server projects, local Python services — and I'm deliberate about structure and quality: modular layouts, pytest and CI where it counts, and SQL or NoSQL stores chosen for the job (SQLite, Firestore). I'm proactive about picking up new stacks quickly when a project needs them.
           </p>
         </div>
         <div class="stat-cards reveal reveal-delay-2">
@@ -829,6 +839,27 @@
         <div class="timeline-item reveal reveal-delay-1">
           <span class="timeline-badge badge-project">Side Project</span>
           <div class="timeline-header">
+            <span class="timeline-company">EasyHouse</span>
+            <span class="timeline-role">Local real estate notifier</span>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Built an end-to-end Python app: multi-platform scrapers, FastAPI dashboard, SQLite dedup and queries, and a pytest suite — local polling cuts HTTP overhead versus centralized scrapers (~70% lower latency in early benchmarks).</li>
+              <li>Structured the codebase with modular platform adapters; added Cloudflare Worker auth, GitHub Actions deploys, and optional email alerts so the tool is shippable without manual ops.</li>
+            </ul>
+            <div class="card-links" style="margin-top:1rem">
+              <a href="https://github.com/nisarmada/easyHouse" target="_blank" rel="noopener" class="card-link" data-cursor="block">
+                <span class="cursor-pull">
+                  GitHub
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal reveal-delay-2">
+          <span class="timeline-badge badge-project">Side Project</span>
+          <div class="timeline-header">
             <span class="timeline-company">The Hotpast Game</span>
             <span class="timeline-role">Fullstack · Firebase</span>
           </div>
@@ -869,6 +900,29 @@
         </article>
 
         <article class="bento-card medium reveal reveal-delay-1">
+          <div class="card-tag">Side Project · Automation</div>
+          <h3 class="card-title">EasyHouse</h3>
+          <p class="card-desc">
+            Local real estate notifier inspired by Stekkies — Python scrapers, FastAPI control panel, and SQLite storage on your machine, with modular adapters for new housing platforms and Cloudflare-backed signup for alerts.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">pytest</span>
+            <span class="tag">Cloudflare</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/nisarmada/easyHouse" target="_blank" rel="noopener" class="card-link" data-cursor="block">
+              <span class="cursor-pull">
+                GitHub
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article class="bento-card medium reveal reveal-delay-2">
           <div class="card-tag">Systems · C++</div>
           <h3 class="card-title">WebServ</h3>
           <p class="card-desc">
@@ -890,14 +944,15 @@
           </div>
         </article>
 
-        <article class="bento-card small reveal reveal-delay-2">
+        <article class="bento-card small reveal reveal-delay-3">
           <div class="card-tag">Systems · C</div>
           <h3 class="card-title">Minishell</h3>
           <p class="card-desc">
-            Custom Unix shell with lexer, parser, pipeline execution, and built-in commands — mirroring core Bash functionality.
+            Custom Unix shell for Linux with lexer, parser, pipeline execution, and built-in commands — mirroring core Bash functionality.
           </p>
           <div class="card-tags">
             <span class="tag">C</span>
+            <span class="tag">Linux</span>
             <span class="tag">Lexing</span>
             <span class="tag">Pipelines</span>
           </div>
@@ -911,7 +966,7 @@
           </div>
         </article>
 
-        <article class="bento-card small reveal reveal-delay-3">
+        <article class="bento-card small reveal reveal-delay-4">
           <div class="card-tag">Side Project · Fullstack</div>
           <h3 class="card-title">The Hotpast Game</h3>
           <p class="card-desc">
@@ -943,15 +998,21 @@
           <span class="skill-pill">C</span>
           <span class="skill-pill">TypeScript</span>
           <span class="skill-pill">Python</span>
+          <span class="skill-pill">FastAPI</span>
           <span class="skill-pill">Django</span>
+          <span class="skill-pill">Linux</span>
           <span class="skill-pill">Next.js</span>
           <span class="skill-pill">React</span>
+          <span class="skill-pill">SQLite</span>
           <span class="skill-pill">Firebase</span>
           <span class="skill-pill">Firestore</span>
+          <span class="skill-pill">Cloudflare</span>
           <span class="skill-pill">HTML</span>
           <span class="skill-pill">CSS</span>
           <span class="skill-pill">Git</span>
+          <span class="skill-pill">CI/CD</span>
           <span class="skill-pill">Docker</span>
+          <span class="skill-pill">pytest</span>
           <span class="skill-pill">HTTP/Sockets</span>
           <span class="skill-pill">CGI</span>
         </div>
@@ -966,7 +1027,7 @@
           <div class="edu-school">Codam Coding College</div>
           <div class="edu-degree">Computer Science</div>
           <div class="edu-date">Oct 2023 — Present</div>
-          <div class="edu-topics">C, C++, Algorithms, Operating Systems, Data Structures</div>
+          <div class="edu-topics">C, C++, Linux/Unix, Algorithms, Operating Systems, Data Structures</div>
         </div>
         <div class="edu-card reveal reveal-delay-1">
           <div class="edu-school">Aristotle University of Thessaloniki</div>
@@ -1030,6 +1091,7 @@
       const MAX_PULL = 26;
       const BLOCK_PAD = 10;
       const SNAP_RADIUS = 90;
+      const NAV_SNAP_RADIUS = 150;
 
       class Spring {
         constructor(value, stiffness = STIFFNESS, damping = DAMPING) {
@@ -1062,7 +1124,12 @@
       let pressed = false;
       let activeTarget = null;
       let activeType = null;
+      let pointerDownTarget = null;
       const pullSprings = new Map();
+
+      function snapRadiusFor(el) {
+        return el.closest('#nav') ? NAV_SNAP_RADIUS : SNAP_RADIUS;
+      }
 
       function getPullSpring(el) {
         if (!pullSprings.has(el)) {
@@ -1077,25 +1144,35 @@
         return el.closest('[data-cursor]');
       }
 
+      function edgeDistanceToRect(x, y, rect) {
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        return Math.max(
+          Math.abs(x - cx) - rect.width / 2,
+          Math.abs(y - cy) - rect.height / 2,
+          0
+        );
+      }
+
       function getNearestBlockTarget(x, y) {
         let nearest = null;
-        let minDist = SNAP_RADIUS;
+        let minDist = Infinity;
         for (const el of targets) {
           if (el.dataset.cursor !== 'block') continue;
-          const rect = el.getBoundingClientRect();
-          const cx = rect.left + rect.width / 2;
-          const cy = rect.top + rect.height / 2;
-          const edgeDist = Math.max(
-            Math.abs(x - cx) - rect.width / 2,
-            Math.abs(y - cy) - rect.height / 2,
-            0
-          );
-          if (edgeDist < minDist) {
+          const edgeDist = edgeDistanceToRect(x, y, el.getBoundingClientRect());
+          const snap = snapRadiusFor(el);
+          if (edgeDist < snap && edgeDist < minDist) {
             minDist = edgeDist;
             nearest = el;
           }
         }
         return nearest;
+      }
+
+      function isClickable(el) {
+        if (!el) return false;
+        const tag = el.tagName;
+        return tag === 'A' || tag === 'BUTTON';
       }
 
       function parseRadius(el, w, h) {
@@ -1212,8 +1289,45 @@
         mouseY = e.clientY;
       });
 
-      document.addEventListener('mousedown', () => { pressed = true; });
+      document.addEventListener('mousedown', (e) => {
+        pressed = true;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        updateTargets();
+        pointerDownTarget =
+          activeTarget && activeType === 'block' && isClickable(activeTarget)
+            ? activeTarget
+            : null;
+      });
       document.addEventListener('mouseup', () => { pressed = false; });
+
+      // Custom cursor snaps onto controls before the pointer reaches them; with
+      // cursor: none, clicks often land outside the real hit target.
+      document.addEventListener('click', (e) => {
+        if (e.defaultPrevented) return;
+
+        const intent = pointerDownTarget;
+        pointerDownTarget = null;
+
+        if (intent && isClickable(intent)) {
+          if (intent.contains(e.target)) return;
+          e.preventDefault();
+          intent.click();
+          return;
+        }
+
+        const direct = e.target.closest('[data-cursor="block"]');
+        if (direct && isClickable(direct)) return;
+
+        const nearest = getNearestBlockTarget(e.clientX, e.clientY);
+        if (!nearest || !isClickable(nearest) || nearest.contains(e.target)) return;
+
+        const rect = nearest.getBoundingClientRect();
+        if (edgeDistanceToRect(e.clientX, e.clientY, rect) >= snapRadiusFor(nearest)) return;
+
+        e.preventDefault();
+        nearest.click();
+      });
 
       document.addEventListener('mouseleave', () => {
         mouseX = -100;
